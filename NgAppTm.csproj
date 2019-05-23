@@ -102,6 +102,10 @@
     </Content>
     <Content Include="package.json" />
     <Content Include="bs-config.json" />
+    <Content Include="src\app\employee\employee.component.css" />
+    <Content Include="src\app\employee\employee.component.html" />
+    <Content Include="src\app\employee\employeeList.component.css" />
+    <Content Include="src\app\employee\employeeList.component.html" />
     <Content Include="tslint.json" />
     <Content Include="src\tsconfig.json" />
     <None Include="Web.Debug.config">
@@ -129,6 +133,9 @@
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\employee\employee.component.ts" />
+    <TypeScriptCompile Include="src\app\employee\employee.Title.pipe.ts" />
+    <TypeScriptCompile Include="src\app\employee\employeeList.component.ts" />
     <TypeScriptCompile Include="src\main.ts" />
   </ItemGroup>
   <ItemGroup>
