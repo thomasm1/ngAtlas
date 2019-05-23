@@ -12,12 +12,25 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var EmployeeListComponent = /** @class */ (function () {
     function EmployeeListComponent() {
+        this.selectedEmployeeCountRadioButton = 'All';
         this.employees = [
             { code: 'emp101', name: 'Aa', gender: 'Male', annualSalary: 55000, dateOfBirth: '3/03/1933' },
             { code: 'emp102', name: 'Bb', gender: 'Female', annualSalary: 65000.88, dateOfBirth: '3/04/1977' },
             { code: 'emp103', name: 'Cc', gender: 'Female', annualSalary: 75000, dateOfBirth: '3/03/1988' },
         ];
     }
+    EmployeeListComponent.prototype.getTotalEmployeesCount = function () {
+        return this.employees.length;
+    };
+    EmployeeListComponent.prototype.getTotalMaleEmployeesCount = function () {
+        return this.employees.filter(function (e) { return e.gender === "Male"; }).length;
+    };
+    EmployeeListComponent.prototype.getTotalFemaleEmployeesCount = function () {
+        return this.employees.filter(function (e) { return e.gender === "Female"; }).length;
+    };
+    EmployeeListComponent.prototype.onEmployeeCountRadioButtonChange = function (selectedRadioButtonValue) {
+        this.selectedEmployeeCountRadioButton = selectedRadioButtonValue;
+    };
     EmployeeListComponent.prototype.getEmployees = function () {
         this.employees = [
             { code: 'emp101', name: 'Aa', gender: 'Male', annualSalary: 55000, dateOfBirth: '3/03/1933' },

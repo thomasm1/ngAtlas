@@ -50,7 +50,7 @@ var AppComponent = /** @class */ (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<div>\n                    <h2>Welcome to {{ title }}</h2>\n                    <h3> Table by .. {{ getFullName() }} </h3>\n                    <h3> {{ pageHeader }} </h3>\n                   Name: <input [(ngModel)]='name'/>\n<br />\nYou entered : {{name}}<br />\n                    <my-employee></my-employee><br />\n                    <list-employee></list-employee>\n\n                   \n                </div>"
+            template: "<div>\n                    <h2>Welcome to {{ title }}</h2>\n<br />\n<hr /> \n                    <h3> {{ pageHeader }} </h3>\n                   Name: <input [(ngModel)]='name'/>\n<br />\nYou entered : {{name}}<br /><br />\n                    <my-employee></my-employee><br />\n                    <list-employee></list-employee>\n\n                   \n                </div>"
         })
         /*
                          <img [src]='https://s3.amazonaws.com/tmm-nov/img/{{imagePath}}'/>

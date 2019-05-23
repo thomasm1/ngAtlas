@@ -4,11 +4,12 @@ import { Component } from '@angular/core';
     selector: 'my-app',
     template: `<div>
                     <h2>Welcome to {{ title }}</h2>
-                    <h3> Table by .. {{ getFullName() }} </h3>
+<br />
+<hr /> 
                     <h3> {{ pageHeader }} </h3>
                    Name: <input [(ngModel)]='name'/>
 <br />
-You entered : {{name}}<br />
+You entered : {{name}}<br /><br />
                     <my-employee></my-employee><br />
                     <list-employee></list-employee>
 
