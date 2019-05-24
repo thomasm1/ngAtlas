@@ -6,7 +6,7 @@
     dateOfBirth: string;
     department?: string;
 
-    computeMonthlySalary(annualSalary: number): number;
+ //   computeMonthlySalary(annualSalary: number): number;
 }
 
 export class Publication implements IPublication {

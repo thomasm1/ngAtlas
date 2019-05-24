@@ -112,6 +112,7 @@
     <Content Include="src\app\publication\publicationList.component.html" />
     <Content Include="tslint.json" />
     <Content Include="src\tsconfig.json" />
+    <Content Include="src\app\data\json.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -140,6 +141,7 @@
     <TypeScriptCompile Include="src\app\blog\blog.component.ts" />
     <TypeScriptCompile Include="src\app\blog\blogList.component.ts" />
     <TypeScriptCompile Include="src\app\publication\publication.component.ts" />
+    <TypeScriptCompile Include="src\app\publication\publication.service.ts" />
     <TypeScriptCompile Include="src\app\publication\publication.Title.pipe.ts" />
     <TypeScriptCompile Include="src\app\publication\publication.ts" />
     <TypeScriptCompile Include="src\app\publication\publicationCount.component.ts" />

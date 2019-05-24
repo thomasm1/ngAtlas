@@ -10,15 +10,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
+var publication_service_1 = require("./publication.service");
 var PublicationListComponent = /** @class */ (function () {
-    function PublicationListComponent() {
+    function PublicationListComponent(_publicationService) {
+        this._publicationService = _publicationService;
         this.selectedPublicationCountRadioButton = 'All';
-        this.publications = [
-            { code: 'emp101', name: 'Aa', gender: 'Male', annualSalary: 55000, dateOfBirth: '3/03/1933' },
-            { code: 'emp102', name: 'Bb', gender: 'Female', annualSalary: 65000.88, dateOfBirth: '3/04/1977' },
-            { code: 'emp103', name: 'Cc', gender: 'Female', annualSalary: 75000, dateOfBirth: '3/03/1988' },
-        ];
+        //   this.publications = this._publicationService.getPublications();
     }
+    PublicationListComponent.prototype.ngOnInit = function () {
+        this.publications = this._publicationService.getPublications();
+    };
+    /*
+  constructor() {
+    this.publications =
+          [
+          { code: 'emp101', name: 'Aa', gender: 'Male', annualSalary: 55000, dateOfBirth: '3/03/1933' },
+          { code: 'emp102', name: 'Bb', gender: 'Female', annualSalary: 65000.88, dateOfBirth: '3/04/1977' },
+          { code: 'emp103', name: 'Cc', gender: 'Female', annualSalary: 75000, dateOfBirth: '3/03/1988' },
+      ];
+  }*/
     PublicationListComponent.prototype.getTotalPublicationsCount = function () {
         return this.publications.length;
     };
@@ -30,6 +40,9 @@ var PublicationListComponent = /** @class */ (function () {
     };
     PublicationListComponent.prototype.onPublicationCountRadioButtonChange = function (selectedRadioButtonValue) {
         this.selectedPublicationCountRadioButton = selectedRadioButtonValue;
+    };
+    PublicationListComponent.prototype.computeMonthlySalary = function (annualSalary) {
+        return annualSalary / 12;
     };
     PublicationListComponent.prototype.getPublications = function () {
         this.publications = [
@@ -47,9 +60,10 @@ var PublicationListComponent = /** @class */ (function () {
         core_1.Component({
             selector: 'list-publication',
             templateUrl: 'app/publication/publicationList.component.html',
-            styleUrls: ['app/publication/publicationList.component.css']
+            styleUrls: ['app/publication/publicationList.component.css'],
+            providers: [publication_service_1.PublicationService]
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [publication_service_1.PublicationService])
     ], PublicationListComponent);
     return PublicationListComponent;
 }());
