@@ -9,8 +9,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
+        this.name = 'placeholder';
         this.title = 'TMM Angular2 - ASP.NET';
-        this.pageHeader = "Employee Details";
+        this.pageHeader = "Publication Details";
         //   isDisabled: boolean = true;
         //    imagePath: string = 'nasa/Broom_Pickering_milne_APODw600.jpg';
         this.firstName = "Tom";
@@ -50,7 +51,7 @@ var AppComponent = /** @class */ (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<div>\n                    <h2>Welcome to {{ title }}</h2>\n<br />\n<hr /> \n                    <h3> {{ pageHeader }} </h3>\n                   Name: <input [(ngModel)]='name'/>\n<br />\nYou entered : {{name}}<br /><br />\n                    <my-employee></my-employee><br />\n                    <list-employee></list-employee>\n\n                   \n                </div>"
+            template: "<div id=\"container\">\n<div id=\"header\">\n                    <h2>{{ title }}</h2>\n                    <br />\n                    <hr /> \n                    <h3> {{ pageHeader }} </h3>\n                    Input: <input type='text' [(ngModel)]='name'/>\n                    <br />\n                  <!--  Output : {{name}}<br /><br /> -->\n                    <simple [simpleInput]='name'></simple>\n                    \n</div>\n\n<div class=\"left\">\n <my-publication></my-publication><br /> \n<list-publication></list-publication>\n</div>\n<div class=\"right\">\n<my-blog></my-blog><br />\n<list-blog></list-blog>\n</div>\n                </div>"
         })
         /*
                          <img [src]='https://s3.amazonaws.com/tmm-nov/img/{{imagePath}}'/>

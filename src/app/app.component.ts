@@ -2,18 +2,27 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    template: `<div>
-                    <h2>Welcome to {{ title }}</h2>
-<br />
-<hr /> 
+    template: `<div id="container">
+<div id="header">
+                    <h2>{{ title }}</h2>
+                    <br />
+                    <hr /> 
                     <h3> {{ pageHeader }} </h3>
-                   Name: <input [(ngModel)]='name'/>
-<br />
-You entered : {{name}}<br /><br />
-                    <my-employee></my-employee><br />
-                    <list-employee></list-employee>
+                    Input: <input type='text' [(ngModel)]='name'/>
+                    <br />
+                  <!--  Output : {{name}}<br /><br /> -->
+                    <simple [simpleInput]='name'></simple>
+                    
+</div>
 
-                   
+<div class="left">
+ <my-publication></my-publication><br /> 
+<list-publication></list-publication>
+</div>
+<div class="right">
+<my-blog></my-blog><br />
+<list-blog></list-blog>
+</div>
                 </div>`
 })  
     /*
@@ -24,8 +33,9 @@ You entered : {{name}}<br /><br />
                     <button bind-disabled='isDisabled'  class="colorClass" [class]='classesToApply' on-click='onClick()'>Details 3</button>
                     */
 export class AppComponent {
+    name: string = 'placeholder';
     title = 'TMM Angular2 - ASP.NET';
-    pageHeader: string = "Employee Details";
+    pageHeader: string = "Publication Details";
  //   isDisabled: boolean = true;
 //    imagePath: string = 'nasa/Broom_Pickering_milne_APODw600.jpg';
     firstName: string = "Tom";

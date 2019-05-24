@@ -102,12 +102,14 @@
     </Content>
     <Content Include="package.json" />
     <Content Include="bs-config.json" />
-    <Content Include="src\app\employee\employee.component.css" />
-    <Content Include="src\app\employee\employee.component.html" />
-    <Content Include="src\app\employee\employeeCount.component.css" />
-    <Content Include="src\app\employee\employeeCount.component.html" />
-    <Content Include="src\app\employee\employeeList.component.css" />
-    <Content Include="src\app\employee\employeeList.component.html" />
+    <Content Include="src\app\blog\blog.component.html" />
+    <Content Include="src\app\blog\blogList.component.html" />
+    <Content Include="src\app\publication\publication.component.css" />
+    <Content Include="src\app\publication\publication.component.html" />
+    <Content Include="src\app\publication\publicationCount.component.css" />
+    <Content Include="src\app\publication\publicationCount.component.html" />
+    <Content Include="src\app\publication\publicationList.component.css" />
+    <Content Include="src\app\publication\publicationList.component.html" />
     <Content Include="tslint.json" />
     <Content Include="src\tsconfig.json" />
     <None Include="Web.Debug.config">
@@ -135,10 +137,15 @@
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
-    <TypeScriptCompile Include="src\app\employee\employee.component.ts" />
-    <TypeScriptCompile Include="src\app\employee\employee.Title.pipe.ts" />
-    <TypeScriptCompile Include="src\app\employee\employeeCount.component.ts" />
-    <TypeScriptCompile Include="src\app\employee\employeeList.component.ts" />
+    <TypeScriptCompile Include="src\app\blog\blog.component.ts" />
+    <TypeScriptCompile Include="src\app\blog\blogList.component.ts" />
+    <TypeScriptCompile Include="src\app\publication\publication.component.ts" />
+    <TypeScriptCompile Include="src\app\publication\publication.Title.pipe.ts" />
+    <TypeScriptCompile Include="src\app\publication\publication.ts" />
+    <TypeScriptCompile Include="src\app\publication\publicationCount.component.ts" />
+    <TypeScriptCompile Include="src\app\publication\publicationList.component.ts" />
+    <TypeScriptCompile Include="src\app\publication\publicationTitle.pipe.ts" />
+    <TypeScriptCompile Include="src\app\utils\simple.component.ts" />
     <TypeScriptCompile Include="src\main.ts" />
   </ItemGroup>
   <ItemGroup>

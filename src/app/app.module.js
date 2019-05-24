@@ -10,17 +10,20 @@ var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
-var employee_component_1 = require("./employee/employee.component");
-var employeeList_component_1 = require("./employee/employeeList.component");
-var EmployeeCount_component_1 = require("./employee/EmployeeCount.component");
-// import { EmployeeTitlePipe }  from './employee/employee.Title.pipe';
+var publication_component_1 = require("./publication/publication.component");
+var publicationList_component_1 = require("./publication/publicationList.component");
+// import { PublicationTitlePipe }  from './publication/publication.Title.pipe';
+var PublicationCount_component_1 = require("./publication/PublicationCount.component");
+var simple_component_1 = require("./utils/simple.component");
+var blog_component_1 = require("./blog/blog.component");
+var blogList_component_1 = require("./blog/blogList.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-            declarations: [app_component_1.AppComponent, employee_component_1.EmployeeComponent, employeeList_component_1.EmployeeListComponent, EmployeeCount_component_1.EmployeeCountComponent],
+            declarations: [simple_component_1.SimpleComponent, app_component_1.AppComponent, publication_component_1.PublicationComponent, publicationList_component_1.PublicationListComponent, PublicationCount_component_1.PublicationCountComponent, blog_component_1.BlogComponent, blogList_component_1.BlogListComponent],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);
