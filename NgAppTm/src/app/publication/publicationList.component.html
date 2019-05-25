@@ -1,0 +1,38 @@
+﻿
+<br />
+<publication-count [all]="getTotalPublicationsCount()"
+                [male]="getTotalMalePublicationsCount()"
+                [female]="getTotalFemalePublicationsCount()"
+                (countRadioButtonSelectionChanged)="onPublicationCountRadioButtonChange($event)">
+
+</publication-count>
+<br /><br />
+<table>
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Salary</th>
+            <th>Date of Birth</th>
+            <th>Index</th> 
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngFor="let publication of publications; trackBy:trackByEmpCode;let i=index;">
+            <tr *ngIf="selectedPublicationCountRadioButton=='All' || selectedPublicationCountRadioButton==publication.gender">
+                <td>{{ publication.code | uppercase}}</td>
+                <td>{{ publication.name}}</td> <!-- | publicationTitle:publication.gender-->
+                <td>{{ publication.gender }}</td>
+                <td>{{ publication.annualSalary | currency:'USD':true:'1.3-3'}}</td>
+                <td>{{ publication.dateOfBirth | date:'dd/MM/y' | uppercase }}</td>
+                <td>{{i}}</td> 
+            </tr>
+        </ng-container>
+        <tr *ngIf="!publications || publications.length==0"> 
+            <td colspan="5">No publications to display</td>
+        </tr>
+    </tbody>
+</table> 
+<br />
+<button (click)="getPublications()">Refresh Publications</button>

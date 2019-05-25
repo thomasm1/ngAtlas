@@ -1,0 +1,24 @@
+﻿<table>
+    <thead>
+        <tr>
+            <th [attr.colspan]="columnspan">
+                Blog Details
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Blog Title </td>
+            <td>{{ title }}</td>
+        </tr>
+        <tr>
+            <td>Blog ID </td>
+            <td>{{ id }}</td>
+        </tr>
+         
+    </tbody>
+</table>
+<br />
+<button (click)="toggleDetails()">
+    {{showDetails? 'Hide':'Show'}}  Details
+</button>

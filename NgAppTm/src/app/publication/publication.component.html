@@ -1,0 +1,31 @@
+﻿<table>
+  <thead>
+      <tr>
+          <th [attr.colspan]="columnspan">
+              Publication Ratings and Stats
+          </th>
+      </tr>
+  </thead>
+    <tbody>
+        <tr>
+            <td>Publication</td>
+            <td>{{ title }}</td>
+        </tr>
+        <tr>
+            <td> ID </td>
+            <td>{{ id }}</td>
+        </tr>
+        <tr  >
+            <td>First ID </td>
+            <td>{{ id }}</td>
+        </tr>
+        <tr *ngIf="showDetails">
+            <td>Last ID </td>
+            <td>{{ id }}</td>
+        </tr>
+    </tbody>
+</table>
+<br />
+<button (click)="toggleDetails()">
+    {{showDetails? 'Hide':'Show'}}  Details
+</button>
