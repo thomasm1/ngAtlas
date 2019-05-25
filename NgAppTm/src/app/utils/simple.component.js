@@ -29,7 +29,7 @@ var SimpleComponent = /** @class */ (function () {
     SimpleComponent = __decorate([
         core_1.Component({
             selector: 'simple',
-            template: 'Output : {{ simpleInput }}'
+            template: 'Output : {{ simpleInput }}<br /><br />'
         })
     ], SimpleComponent);
     return SimpleComponent;

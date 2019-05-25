@@ -2,7 +2,7 @@
 
 @Component({
     selector: 'simple',
-    template: 'Output : {{ simpleInput }}'
+    template: 'Output : {{ simpleInput }}<br /><br />'
 })
  
 export class SimpleComponent implements OnChanges {
