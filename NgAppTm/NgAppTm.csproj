@@ -140,6 +140,8 @@
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\blog\blog.component.ts" />
     <TypeScriptCompile Include="src\app\blog\blogList.component.ts" />
+    <TypeScriptCompile Include="src\app\home\home.component.ts" />
+    <TypeScriptCompile Include="src\app\home\pageNotFound.component.ts" />
     <TypeScriptCompile Include="src\app\publication\publication.component.ts" />
     <TypeScriptCompile Include="src\app\publication\publication.service.ts" />
     <TypeScriptCompile Include="src\app\publication\publication.Title.pipe.ts" />
@@ -153,6 +155,7 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

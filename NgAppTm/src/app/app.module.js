@@ -15,15 +15,24 @@ var publicationList_component_1 = require("./publication/publicationList.compone
 // import { PublicationTitlePipe }  from './publication/publication.Title.pipe';
 var PublicationCount_component_1 = require("./publication/PublicationCount.component");
 var simple_component_1 = require("./utils/simple.component");
+var home_component_1 = require("./home/home.component");
+var pageNotFound_component_1 = require("./home/pageNotFound.component");
+var router_1 = require("@angular/router");
 var blog_component_1 = require("./blog/blog.component");
 var blogList_component_1 = require("./blog/blogList.component");
+var appRoutes = [
+    { path: 'home', component: home_component_1.HomeComponent },
+    { path: 'publications', component: publicationList_component_1.PublicationListComponent },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: '**', component: pageNotFound_component_1.PageNotFoundComponent }
+];
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule],
-            declarations: [simple_component_1.SimpleComponent, app_component_1.AppComponent, publication_component_1.PublicationComponent, publicationList_component_1.PublicationListComponent, PublicationCount_component_1.PublicationCountComponent, blog_component_1.BlogComponent, blogList_component_1.BlogListComponent],
+            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, router_1.RouterModule.forRoot(appRoutes)],
+            declarations: [simple_component_1.SimpleComponent, app_component_1.AppComponent, publication_component_1.PublicationComponent, publicationList_component_1.PublicationListComponent, PublicationCount_component_1.PublicationCountComponent, home_component_1.HomeComponent, blog_component_1.BlogComponent, blogList_component_1.BlogListComponent, pageNotFound_component_1.PageNotFoundComponent],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);

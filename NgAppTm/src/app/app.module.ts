@@ -7,15 +7,24 @@ import { PublicationListComponent } from './publication/publicationList.componen
 // import { PublicationTitlePipe }  from './publication/publication.Title.pipe';
 import { PublicationCountComponent } from './publication/PublicationCount.component';
 import { SimpleComponent } from './utils/simple.component';
-
+import { HomeComponent } from './home/home.component'; 
+import { PageNotFoundComponent } from './home/pageNotFound.component';
+import { RouterModule, Routes } from '@angular/router';
 
 import { BlogComponent } from './blog/blog.component';
 import { BlogListComponent } from './blog/blogList.component';
 
+const appRoutes: Routes = [
+    { path: 'home', component: HomeComponent },
+    { path: 'publications', component: PublicationListComponent },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: '**', component: PageNotFoundComponent }
+];
+
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-    declarations: [SimpleComponent, AppComponent, PublicationComponent, PublicationListComponent, PublicationCountComponent, BlogComponent, BlogListComponent ],    // , PublicationTitlePipe
-  bootstrap:    [ AppComponent ]
+    imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes) ],
+    declarations: [SimpleComponent, AppComponent, PublicationComponent, PublicationListComponent, PublicationCountComponent, HomeComponent, BlogComponent, BlogListComponent, PageNotFoundComponent ],    // , PublicationTitlePipe
+    bootstrap:    [ AppComponent ]
 })
 
 export class AppModule { }

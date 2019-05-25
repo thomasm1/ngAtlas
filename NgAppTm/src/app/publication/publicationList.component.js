@@ -51,6 +51,9 @@ var PublicationListComponent = /** @class */ (function () {
             { code: 'emp103', name: 'Cc', gender: 'Female', annualSalary: 75000, dateOfBirth: '3/03/1988' },
             { code: 'emp104', name: 'Dd', gender: 'Female', annualSalary: 85000.55, dateOfBirth: '3/05/1999' },
             { code: 'emp105', name: 'Ee', gender: 'Male', annualSalary: 85000, dateOfBirth: '3/06/1997' },
+            { code: 'emp103', name: 'Cc', gender: 'Female', annualSalary: 75000, dateOfBirth: '3/03/1988' },
+            { code: 'emp104', name: 'Dd', gender: 'Female', annualSalary: 85000.55, dateOfBirth: '3/05/1999' },
+            { code: 'emp105', name: 'Ee', gender: 'Male', annualSalary: 85000, dateOfBirth: '3/06/1997' }
         ];
     };
     PublicationListComponent.prototype.trackByEmpCode = function (index, publication) {

@@ -2,28 +2,34 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'my-app',
-    template: `<div id="container">
-<div id="header">
-                    <h2>{{ title }}</h2>
-                    <br />
-                    <hr /> 
-                    <h3> {{ pageHeader }} </h3>
-                    Input: <input type='text' [(ngModel)]='name'/>
-                    <br />
-                  <!--  Output : {{name}}<br /><br /> -->
-                    <simple [simpleInput]='name'></simple>
-                    
-</div>
-
-<div class="left">
- <my-publication></my-publication><br /> 
-<list-publication></list-publication>
-</div>
-<div class="right">
-<my-blog></my-blog><br />
-<list-blog></list-blog>
-</div>
-                </div>`
+    template: `
+<div id="container">
+    <div style="padding: 5px">
+        <ul class="nav nav-tabs">
+            <li><a routerLink="home">Home</a> </li>
+            <li><a routerLink="publications">Publications</a> </li>
+        </ul>
+        <router-outlet></router-outlet>
+    </div> 
+    <div id="header">
+        <h2>{{ title }}</h2>
+        <br />
+        <hr /> 
+        <h3> {{ pageHeader }} </h3>
+        Input: <input type='text' [(ngModel)]='name'/>
+        <br />
+            <!--  Output : {{name}}<br /><br /> -->
+        <simple [simpleInput]='name'></simple> 
+        </div> 
+        <div class="left">
+            <my-publication></my-publication><br /> 
+        <list-publication></list-publication>
+        </div>
+        <div class="right">
+        <my-blog></my-blog><br />
+        <list-blog></list-blog>
+    </div>
+</div>`
 })  
     /*
                      <img [src]='https://s3.amazonaws.com/tmm-nov/img/{{imagePath}}'/>
