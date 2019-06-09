@@ -12,7 +12,7 @@ var HomeComponent = /** @class */ (function () {
     }
     HomeComponent = __decorate([
         core_1.Component({
-            template: '<div height="300px"><h2>Home Page</h2></div>'
+            templateUrl: 'app/home/home.component'
         })
     ], HomeComponent);
     return HomeComponent;

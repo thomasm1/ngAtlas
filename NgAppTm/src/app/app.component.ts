@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
     selector: 'my-app',
     template: `
 <div id="container">
+<navi-bar></navi-bar>
     <div style="padding: 5px; font-size:100%;">
         <ul  style="padding: 5px" class="nav nav-tabs">
             <li><a routerLink="home">Home</a>&nbsp;&nbsp;</li>

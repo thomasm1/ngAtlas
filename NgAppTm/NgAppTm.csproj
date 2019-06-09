@@ -104,15 +104,25 @@
     <Content Include="bs-config.json" />
     <Content Include="src\app\blog\blog.component.html" />
     <Content Include="src\app\blog\blogList.component.html" />
+    <Content Include="src\app\home\home.component.html" />
     <Content Include="src\app\publication\publication.component.css" />
     <Content Include="src\app\publication\publication.component.html" />
     <Content Include="src\app\publication\publicationCount.component.css" />
     <Content Include="src\app\publication\publicationCount.component.html" />
     <Content Include="src\app\publication\publicationList.component.css" />
     <Content Include="src\app\publication\publicationList.component.html" />
+    <Content Include="src\app\shared\images\error.jpg" />
+    <Content Include="src\app\shared\images\monitor.jpg" />
+    <Content Include="src\app\shared\images\smartphone.jpg" />
+    <Content Include="src\app\shared\navbar.component.css" />
+    <Content Include="src\app\shared\navbar.component.js" />
     <Content Include="tslint.json" />
     <Content Include="src\tsconfig.json" />
     <Content Include="src\app\data\json.json" />
+    <Content Include="src\app\shared\navbar.component.js.map" />
+    <Content Include="src\app\shared\sass\styles.scss" />
+    <Content Include="src\app\shared\sass\_settings.old" />
+    <Content Include="src\app\shared\sass\_settings.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -149,6 +159,7 @@
     <TypeScriptCompile Include="src\app\publication\publicationCount.component.ts" />
     <TypeScriptCompile Include="src\app\publication\publicationList.component.ts" />
     <TypeScriptCompile Include="src\app\publication\publicationTitle.pipe.ts" />
+    <TypeScriptCompile Include="src\app\shared\navbar.component.ts" />
     <TypeScriptCompile Include="src\app\utils\simple.component.ts" />
     <TypeScriptCompile Include="src\main.ts" />
   </ItemGroup>
