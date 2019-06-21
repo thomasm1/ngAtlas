@@ -1,0 +1,11 @@
+ 
+<div *ngIf = 'appStatus'>
+    <h3>{{appStatusName}}</h3> 
+</div>
+  <div *ngFor = 'let lst of appList'>
+    <ul>
+        <li>{{lst.ID}}</li>
+        <li>{{lst.title}}</li>
+        <img [src]='lst.url'>
+    </ul>
+</div>  
