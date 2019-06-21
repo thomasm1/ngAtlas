@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+<<<<<<< HEAD
 import { Router } from '@angular/router';
 
 @Component ({
@@ -11,5 +12,13 @@ export class Appblogs {
     onBack(): void {
         this._router.navigate(['/']);
     }
+=======
+
+@Component ({
+    selector: 'my-app',
+    template: '... Blogs!'
+})
+export class Appblogs {
+>>>>>>> 496332d5481317da8a80ec83e43fefa54127bf43
 
 }
