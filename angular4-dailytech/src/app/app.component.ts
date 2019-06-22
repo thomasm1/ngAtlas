@@ -13,9 +13,18 @@ import 'rxjs/add/operator/map';
   providers: [BlogService]
 })
 
-export class AppComponent  {  
-  appStatusName: string = 'App-Status: Good';
-  appStatus: boolean = true; 
+export class AppComponent  {   
+  appStatusName: string = 'App-Status: ';
+  appStatus: boolean = true;
+  togBtn: string = 'Hide';
+
+  clicked() { 
+    this.appStatus = (this.appStatus===true)? false:true; 
+    this.togBtn= (this.appStatus===true)?'Hide':'Show';
+  }
+  newStatus: string = 'Good';
+
+
   appList: any[] = [
     {
     "ID":"1",

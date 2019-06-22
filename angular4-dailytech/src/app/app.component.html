@@ -4,10 +4,15 @@
     <li><a [routerLink] = "['/Form']">Form</a></li>
 </ul> 
 <router-outlet></router-outlet>
-<div *ngIf = 'appStatus'>
-    <h3>{{appStatusName}}</h3> 
-</div>
+<hr>
+<button (click) = "clicked()">{{togBtn}} Status </button>
 
+<div style="background-color:aliceblue;" *ngIf = 'appStatus'>
+    <h3>{{appStatusName}} {{newStatus}} 
+        &nbsp; &nbsp; &nbsp;New Status? Enter it here...<input [value]="" (input)="newStatus=$event.target.value"></h3>  
+    
+</div>
+<hr>
 <div *ngFor = 'let lst of appList'>
     <ul>
         <li>{{lst.ID}}</li>
