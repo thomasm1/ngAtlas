@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IBlogs } from './blogs';
-import { BlogService } from './blogs.service'; 
+import { BlogService } from './blogs.service';  
 
 import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
@@ -28,8 +28,6 @@ export class AppComponent  {
     "url":"//s3.amazonaws.com/aws-sensor-temperature/header.png"
   }
 ];
-
-
 
   iblogs: IBlogs[];
   constructor(private _iblogs: BlogService) {
