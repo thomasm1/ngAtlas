@@ -15,6 +15,9 @@ h1 {
 button {
   margin-left:20px;
 }
+.active {
+  font-weight:bold;
+}
 .pages {
   color:white;
   background-image:url('//s3.amazonaws.com/aws-sensor-temperature/header.png');

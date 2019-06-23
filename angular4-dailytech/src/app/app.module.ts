@@ -18,6 +18,7 @@ const appRoutes: Routes = [
   { path: 'Blogs', component: Appblogs },
   { path: 'Collection', component: AppCollection },
   { path: 'Form', component: FormBlogComponent },
+  { path: '', redirectTo:'',  pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 

@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 @Component ({
     selector: 'my-app',
-    template: '<h4></h4><br /> '
+    template: '<hr><div><h2 style="color:red">Oops...404, page not found</h2></div><a class="button" (click)="onBack()"><button>Back to Home</button></a><hr>'
 })
 
 export class PageNotFoundComponent {
