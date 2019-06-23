@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Acquaintance } from '../models/acquaintance.model'; 
+import { Person } from '../models/person.model';
+import { PersonService } from './person.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'tm-create-person',
@@ -9,12 +13,34 @@ import { NgForm } from '@angular/forms';
 export class CreatePersonComponent implements OnInit {
   //contactType="email";
   //isActive=true
-  constructor() { }
+  person: Person = {
+    id: null,
+    name: null, 
+    email: null, 
+    phone: null, 
+    contactType: null, 
+    acquaintance: null, 
+    dateOfBirth: null, 
+    isActive: null,
+    photoPath: null
+
+  }; 
+
+  acquaintances: Acquaintance[] = [  
+    {id:1, name: 'Pre College'},
+    {id:2, name: 'College'},
+    {id:3, name: 'Ed Work'},
+    {id:4, name: 'Tech Work'},
+    {id:5, name: 'Clubs &amp; Groups'},
+    {id:6, name: 'Miscellaneous'} 
+  ];
+  constructor(private _personService: PersonService, private _router: Router) {}
 
   ngOnInit() {
   }
 
-  savePerson(personForm: NgForm): void {
-    console.log(personForm.value);
+  savePerson(): void { 
+    this._personService.save(this.person);
+    this._router.navigate(['list']);
   }
 }

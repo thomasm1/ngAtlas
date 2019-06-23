@@ -1,20 +1,20 @@
-<form #personForm="ngForm" (ngSubmit)="savePerson(personForm)">
+<form #personForm="ngForm" (ngSubmit)="savePerson()">
     <div class="panel panel-primary">
         <div class="panel-heading">
           <h3 class="panel-title">Add New Contact</h3>
         </div>
         <div class="panel-body">
           <div class="form-group">
-            <label for="fullName">Full Name</label>
-            <input id="fullName" name="fullName" [(ngModel)]="fullName" type="text" class="form-control">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" [(ngModel)]="person.name" type="text" class="form-control" #name="ngModel">
           </div>
           <div class="form-group">
               <label for="email">Email</label>
-              <input id="email" name="email" [(ngModel)]="email" type="text" class="form-control">
+              <input id="email" name="email" [(ngModel)]="person.email" type="text" class="form-control">
             </div>
             <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input id="phone" name="phone" [(ngModel)]="phone" type="text" class="form-control">
+                <input id="phone" name="phone" [(ngModel)]="person.phone" type="text" class="form-control">
               </div>
               <div class="form-group">
                   <label for="contactType">Contact Preference</label>
@@ -24,14 +24,14 @@
                       type="radio" 
                       value="email" 
                       name="contactType"
-                      [(ngModel)]="contactType">
+                      [(ngModel)]="person.contactType">
                     Email</label>
                     <label  class="radio-inline">
                         <input 
                         type="radio" 
                         value="phone" 
                         name="contactType"
-                        [(ngModel)]="contactType">
+                        [(ngModel)]="person.contactType">
                       Phone</label>
                   </div>                  
               </div>
@@ -42,7 +42,7 @@
                       <input 
                       type="checkbox"  
                       name="isActive"
-                      [(ngModel)]="isActive">
+                      [(ngModel)]="person.isActive">
                     Is Active</label> 
                   </div> 
               </div>
@@ -51,16 +51,28 @@
                   <select 
                   id="acquaintance"
                   name="acquaintance" 
-                  [(ngModel)]="acquaintance"
+                  [(ngModel)]="person.acquaintance"
                   class="form-control">
-                    <option value="1">College BA</option>
+                    <option *ngFor="let acq of acquaintances" [value]="acq.id">
+                      {{acq.name}}
+                    </option>
+                    <!-- <option value="1">College BA</option>
                     <option value="2">College MA</option>
                     <option value="3">Education Work</option>
                     <option value="4">Tech Work</option>
                     <option value="5">Clubs &amp; Groups</option>
-                    <option value="6">Miscellaneous</option>
-                </select>
-
+                    <option value="6">Miscellaneous</option> -->
+                </select> 
+              </div>
+              <div class="form-group">
+                  <label for="dateOfBirth">Birthday</label>
+                  <input 
+                  id="dateOfBirth" 
+                  name="dateOfBirth" 
+                  [(ngModel)]="person.dateOfBirth"
+                  type="date"
+                  bsDatepicker
+                  class="form-control">
               </div>
         </div>
         <div class="panel-footer">
@@ -69,4 +81,4 @@
     </div>
 </form>
 
-<p  >{{personForm.value | json}}</p>
+<p>{{personForm.value | json}}</p>
