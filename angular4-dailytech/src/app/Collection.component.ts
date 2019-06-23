@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 
 @Component ({
     selector: 'my-app',
-    template: '<hr><h4>Collection</h4><br /><a class="button" (click)="onBack()"><button>Back to Home</button></a><hr>'
+    template: '<div class="pages"><hr><h2>Collection</h2><br /><a class="button" (click)="onBack()"><button>Back to Home</button></a><hr></div>'
 })
 export class AppCollection {
     constructor(private _router: Router) {}

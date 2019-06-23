@@ -1,5 +1,8 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+import  { ChildComponent } from './child.component';
+import { MultiplierPipe } from './multiplier.pipe';
 import { AppComponent }  from './app.component';
 import { Appblogs }  from './blogs.component';
 import { AppCollection }  from './Collection.component';
@@ -20,7 +23,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpModule, RouterModule.forRoot(appRoutes) ],
-  declarations: [ AppComponent, FormBlogComponent, Appblogs, AppCollection, PageNotFoundComponent ],
+  declarations: [ AppComponent, FormBlogComponent, MultiplierPipe, ChildComponent, Appblogs, AppCollection, PageNotFoundComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

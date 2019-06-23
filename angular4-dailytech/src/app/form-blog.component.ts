@@ -3,7 +3,7 @@ import { Form } from './form';
 
 @Component ({
     selector: 'form-blog',
-    template: `<div class="container">
+    template: `<div class="pages container">
     <form>
     <h3>Blog Form</h3>
         <div class="form-group">

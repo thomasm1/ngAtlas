@@ -1,18 +1,25 @@
-<ul>
-    <li><a [routerLink] = "['/Blogs']">Blogs</a></li>
-    <li><a [routerLink] = "['/Collection']">Collection</a></li>
-    <li><a [routerLink] = "['/Form']">Form</a></li>
-</ul> 
+<div class="pages pull-right"> <h2>{{ newDate | date: 'MM/dd/yy' }}</h2> </div>
+<br />
+<hr>
+    <ul>
+        <li><a [routerLink] = "['/Blogs']">Blogs | </a></li>
+        <li><a [routerLink] = "['/Collection']">Collection | </a></li>
+        <li><a [routerLink] = "['/Form']">Form</a></li>
+    </ul> 
 <router-outlet></router-outlet>
-<hr>
-<button (click) = "clicked()">{{togBtn}} Status </button>
-
-<div style="background-color:aliceblue;" *ngIf = 'appStatus'>
-    <h3>{{appStatusName}} {{newStatus}} 
-        &nbsp; &nbsp; &nbsp;New Status? Enter it here...<input [value]="" (input)="newStatus=$event.target.value"></h3>  
-    
+<div style="background-color:aliceblue;" >
+    <hr>
+    <button (click) = "clicked()">{{togBtn}} Status </button>
+<br />
+    <div *ngIf = 'appStatus'>
+        <h3>{{appStatusName}} <strong>{{newStatus}}</strong> 
+           <br /><br /><i>New Status?</i> Enter it here...<input [value]="" (input)="newStatus=$event.target.value"></h3>  
+        
+    </div>
+    <hr>
 </div>
-<hr>
+<p>Multiplier: {{ 2 | Multiplier: 10 }}</p>
+<child-app></child-app>
 <div *ngFor = 'let lst of appList'>
     <ul>
         <li>{{lst.ID}}</li>
