@@ -10,11 +10,6 @@ nav#nav{
     background-image: url('assets/images/patterns/silverchip.png');
     border:outset 3px silver;
 }
-.imageClass{
-    width: 200px;
-    height: 200px;
+div.info {
+    min-width:60%;
 }
-.vertical-align {
-    display: flex;
-    align-items: center;
-} 

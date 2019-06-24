@@ -1,8 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Person } from '../models/person.model';
+//import { Observable } from 'rxjs/Observable';
+//import { HttpClient } from '@angular/common/http'; 
 
 @Injectable()
 export class PersonService {
+  //constructor(private httpClient: HttpClient) {}
+
   private listPersons: Person[] = [
     {
       id: 1,
@@ -10,7 +14,7 @@ export class PersonService {
       email: 'thomasm1.maestas@gmail.com',
       phone: 5055087707, 
       contactType: 'email',
-      acquaintance: 'Tech Work',
+      acquaintance: '5',
       dateOfBirth: new Date('9/3/2020'), 
       isActive: true,
       photoPath: 'assets/images/a.png'
@@ -21,7 +25,7 @@ export class PersonService {
       email: 'thomas@gmail.com',
       phone: 5055087707, 
       contactType: 'phone',
-      acquaintance: 'Pre College',
+      acquaintance: '2',
       dateOfBirth: new Date('9/3/1976'), 
       isActive: true,
       photoPath: 'assets/images/d.png'
@@ -32,19 +36,22 @@ export class PersonService {
       email: 'milton@gmail.com',
       phone: 5055087707, 
       contactType: 'email',
-      acquaintance: 'College',
+      acquaintance: '3',
       dateOfBirth: new Date('9/3/2000'), 
       isActive: false,
       photoPath: 'assets/images/s.png'
     }
   ];
 
+    // getPersons(): Observable<Person[]> {
+    //   return this.httpClient.get<Person[]>('http://localhost:3000/persons')
+    // }
   getPersons(): Person[] {
     return this.listPersons;
   }
   save(person: Person) {
     this.listPersons.push(person);
   }
-  constructor() { }
+ 
 
 }
