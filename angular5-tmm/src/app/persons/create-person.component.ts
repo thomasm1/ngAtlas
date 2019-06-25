@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Acquaintance } from '../models/acquaintance.model'; 
 import { Person } from '../models/person.model';
@@ -13,6 +13,8 @@ import { Router } from '@angular/router';
 export class CreatePersonComponent implements OnInit {
   //contactType="email";
   //isActive=true
+  @ViewChild('personForm') public createPersonForm: NgForm;
+  
   person: Person = {
     id: null,
     name: null, 

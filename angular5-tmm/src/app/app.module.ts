@@ -9,10 +9,19 @@ import { ListPersonsComponent } from './persons/list-persons.component';
 import { CreatePersonComponent } from './persons/create-person.component';
 import { PersonService } from './persons/person.service';
 import { DisplayPersonComponent } from './persons/display-person.component';
+import { CreatePersonCanDeactivateGuardService } from './persons/create-person-can-deactivate-guard.service';
+import { PersonDetailsComponent } from './persons/person-details.component';
 
 const tmRoutes: Routes = [
   { path: 'list', component: ListPersonsComponent},
-  { path: 'create', component: CreatePersonComponent},
+
+  { path: 'create', 
+  component: CreatePersonComponent,
+  canDeactivate: [CreatePersonCanDeactivateGuardService]},
+
+  { path: 'persons/:id', 
+  component: PersonDetailsComponent},
+  
   { path: '', redirectTo: '/list', pathMatch: 'full' }
 ]
 @NgModule({
@@ -20,15 +29,16 @@ const tmRoutes: Routes = [
     AppComponent, 
     ListPersonsComponent,
     CreatePersonComponent,
-    DisplayPersonComponent
+    DisplayPersonComponent,
+    PersonDetailsComponent
   ],
-  imports: [
+  imports: [ 
     BrowserModule, 
     FormsModule,  
     HttpClientModule,
     RouterModule.forRoot(tmRoutes)
   ],
-  providers: [PersonService],
+  providers: [PersonService, CreatePersonCanDeactivateGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

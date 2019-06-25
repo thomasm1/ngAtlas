@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Person } from '../models/person.model';
+import { e } from '@angular/core/src/render3';
 //import { Observable } from 'rxjs/Observable';
 //import { HttpClient } from '@angular/common/http'; 
 
@@ -48,6 +49,9 @@ export class PersonService {
     // }
   getPersons(): Person[] {
     return this.listPersons;
+  }
+  getPerson(id: number): Person {
+    return this.listPersons.find(e => e.id === id)
   }
   save(person: Person) {
     this.listPersons.push(person);
