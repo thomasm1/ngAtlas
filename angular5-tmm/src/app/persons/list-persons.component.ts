@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 })
 export class ListPersonsComponent implements OnInit {
   persons: Person[];
+  searchTerm: string;
+
   dataFromChild: Person;
   // personToDisplay: Person;
   // private arrayIndex = 1;

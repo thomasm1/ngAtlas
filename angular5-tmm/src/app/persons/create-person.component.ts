@@ -42,7 +42,9 @@ export class CreatePersonComponent implements OnInit {
   }
 
   savePerson(): void { 
-    this._personService.save(this.person);
+    const newPerson: Person = Object.assign ({}, this.person);
+    this._personService.save(newPerson); 
+    this.createPersonForm.reset();
     this._router.navigate(['list']);
   }
 }

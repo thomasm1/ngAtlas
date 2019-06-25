@@ -11,6 +11,7 @@ import { PersonService } from './persons/person.service';
 import { DisplayPersonComponent } from './persons/display-person.component';
 import { CreatePersonCanDeactivateGuardService } from './persons/create-person-can-deactivate-guard.service';
 import { PersonDetailsComponent } from './persons/person-details.component';
+import { PersonFilterPipe } from './persons/person-filter.pipe';
 
 const tmRoutes: Routes = [
   { path: 'list', component: ListPersonsComponent},
@@ -30,7 +31,8 @@ const tmRoutes: Routes = [
     ListPersonsComponent,
     CreatePersonComponent,
     DisplayPersonComponent,
-    PersonDetailsComponent
+    PersonDetailsComponent,
+    PersonFilterPipe
   ],
   imports: [ 
     BrowserModule, 

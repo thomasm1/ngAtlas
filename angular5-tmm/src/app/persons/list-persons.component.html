@@ -1,5 +1,8 @@
+<div class="form-group">
+    <input type="text" class="form-control" placeholder="Search! " style="width: 300px" [(ngModel)]="searchTerm" />
+</div>
 <h4 #h4Variable></h4>
-    <div  *ngFor="let person of persons">
+    <div  *ngFor="let person of persons | personFilter:searchTerm">
    <!-- Call child component methods/properties using Template Reference Variable -->
    <div (click) = "onClick(person.id)" class="pointerCursor">
         <div (click)="h4Variable.innerHTML = childComponent.getPersonNameAndEmail()">
