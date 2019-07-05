@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./list-persons.component.css']
 })
 export class ListPersonsComponent implements OnInit {
+  emailSearch: string;
   persons: Person[];
   filteredPersons: Person[]; //muyimprtante - no need to query webserver for each filter; returns full list without roundtrip
 
@@ -34,6 +35,7 @@ export class ListPersonsComponent implements OnInit {
               private _router: Router) { }
 
   ngOnInit() {
+    this.emailSearch = "";
     this.persons = this._personService.getPersons();
     this.filteredPersons = this.persons;
     //this.personToDisplay = this.persons[0];
