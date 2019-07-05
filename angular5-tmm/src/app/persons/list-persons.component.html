@@ -1,10 +1,10 @@
-<div class="form-group">
-    <input type="text" class="form-control" placeholder="Search! " style="width: 300px" [(ngModel)]="searchTerm" />
+<div class="form-group" style="height:40px;">
+    <input type="text" class="form-control" placeholder="Name Search! " style="float:left;width: 300px" [(ngModel)]="searchTerm" />
     <span *ngIf="searchTerm" style="color:blue;background-color:aliceblue;">Name Searched ... {{searchTerm}} &nbsp;&nbsp;&nbsp;</span>
-    <input [value]="" (input)="emailSearch=$event.target.value" /> 
+ 
+    <input type="text" class="form-control" placeholder="Email Search .."  style="float:left;width: 300px" [value]="" (input)="emailSearch=$event.target.value" /> 
     <span *ngIf="emailSearch" style="color:blue;background-color:aliceblue;">Email Searched ... {{emailSearch}} &nbsp;&nbsp;&nbsp;</span>
-
-</div>
+</div >
 <h4 #h4Variable></h4>
     <div  *ngFor="let person of filteredPersons"> <!-- | personFilter:searchTerm     ::Dont use filter property ... after 2x,3x...remove filter pipe!-->
         <!-- Call child component methods/properties using Template Reference Variable --> 
