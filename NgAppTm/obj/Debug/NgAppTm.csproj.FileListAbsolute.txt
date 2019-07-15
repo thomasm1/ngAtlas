@@ -64,3 +64,4 @@ C:\w\www\git\ng2app\NgAppTm\bin\Microsoft.AI.Web.xml
 C:\w\www\git\ng2app\NgAppTm\bin\Microsoft.AI.WindowsServer.xml
 C:\w\www\git\ng2app\NgAppTm\bin\Microsoft.ApplicationInsights.xml
 C:\w\www\git\ng2app\NgAppTm\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\w\www\git\ngAtlas\NgAppTm\obj\Debug\NgAppTm.csprojAssemblyReference.cache
