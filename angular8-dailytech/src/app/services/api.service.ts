@@ -17,30 +17,35 @@ export class ApiService {
   // postsUrl:string =  'https://tmm-nov.s3.amazonaws.com/data/posts/may19.json';
   postsLimit = '?_limit=5';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { } 
 
-  //server-side
+  // Update server-side
   toggleSelected(post: Post): Observable<any> {
     const url = `${this.postsUrl}/${post.id}`;
     return this.http.put(url, post, httpOptions);
-  }
-  //server-side
+  } 
+  // Get server-side
+    getPosts(): Observable<Post[]> {
+      return this.http.get<Post[]>(`${this.postsUrl}${this.postsLimit}`);
+      // return [
+      //   {
+      //     id: 1,
+      //     author: 'Thomas Maestas',
+      //     date: 'May 8, 2019',
+      //     cat3: 'Musing Blockchain',
+      //     title: 'Post One',
+      //     selected: false
+      //   } 
+      // ]
+    } 
+  //Delete server-side
   deletePost(post:Post):Observable<Post> {
     const url = `${this.postsUrl}/${post.id}`;
     return this.http.delete<Post>(url, httpOptions);
   }
-  //server-side
-  getPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>(`${this.postsUrl}${this.postsLimit}`);
-    // return [
-    //   {
-    //     id: 1,
-    //     author: 'Thomas Maestas',
-    //     date: 'May 8, 2019',
-    //     cat3: 'Musing Blockchain',
-    //     title: 'Post One',
-    //     selected: false
-    //   } 
-    // ]
-  } 
+  //Add server-side
+  addPost(post:Post):Observable<Post> {
+    return this.http.post<Post>(this.postsUrl, post, httpOptions);
+  }
+
 }

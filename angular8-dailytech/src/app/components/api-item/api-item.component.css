@@ -10,22 +10,36 @@
 .is-selected {
     background:yellow !important;
 }
-.strong { 
-    padding:2px;
-    font-weight:bold;
-    margin-left:14px;
-
-} 
-.strong-first { 
-    padding:2px;
+.strong {   
+    padding:3px;
+    padding-right:10px;
+    /* margin-left:10px; */
     font-weight:bold; 
 
+}   
+span.title {
+    text-align:left;
 }
-.post { 
+.post {  
     padding:2px;
     white-space: nowrap;  
+    text-align:left;
 }
 p { 
     border-bottom:1px rgb(150, 149, 149) dotted; 
     padding:5px;
 }
+
+/* .form {
+    display:flex;
+    max-width:80%;
+    margin:auto;
+} 
+.form input[type='text'] {
+    flex: 11;
+    padding:5px;
+    background:rgba(192, 192, 192, 0.349);
+}
+.form input[type='submit'] {
+    flex:1;
+} */
