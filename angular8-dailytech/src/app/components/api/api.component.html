@@ -1,0 +1,13 @@
+<div> 
+    <hr>  
+    <app-header></app-header>
+    <hr> 
+</div>
+<app-add-post>
+
+</app-add-post>
+<hr>
+<app-api-item *ngFor="let post of posts" 
+[post]="post"
+(deletePost)="deletePost($event)"> 
+</app-api-item>
