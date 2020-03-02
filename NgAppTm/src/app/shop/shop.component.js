@@ -8,12 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var firebase = require("firebase");
 var user_service_1 = require("../admin/adminShared/user.service");
-var ShopComponent = /** @class */ (function () {
+var ShopComponent = (function () {
     function ShopComponent(userSVC, router) {
         this.userSVC = userSVC;
         this.router = router;
@@ -33,14 +32,14 @@ var ShopComponent = /** @class */ (function () {
     ShopComponent.prototype.chooseProduct = function (prod) {
         this.router.navigate(['/product', prod.id]);
     };
-    ShopComponent = __decorate([
-        core_1.Component({
-            templateUrl: './shop.component.html',
-            styleUrls: ['./shop.component.css']
-        }),
-        __metadata("design:paramtypes", [user_service_1.UserService, router_1.Router])
-    ], ShopComponent);
     return ShopComponent;
 }());
+ShopComponent = __decorate([
+    core_1.Component({
+        templateUrl: './shop.component.html',
+        styleUrls: ['./shop.component.css']
+    }),
+    __metadata("design:paramtypes", [user_service_1.UserService, router_1.Router])
+], ShopComponent);
 exports.ShopComponent = ShopComponent;
 //# sourceMappingURL=shop.component.js.map

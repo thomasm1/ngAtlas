@@ -8,9 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var EmployeeListComponent = /** @class */ (function () {
+var EmployeeListComponent = (function () {
     function EmployeeListComponent() {
         this.selectedEmployeeCountRadioButton = 'All';
         this.employees = [
@@ -43,15 +42,15 @@ var EmployeeListComponent = /** @class */ (function () {
     EmployeeListComponent.prototype.trackByEmpCode = function (index, employee) {
         return employee.code;
     };
-    EmployeeListComponent = __decorate([
-        core_1.Component({
-            selector: 'list-employee',
-            templateUrl: 'app/employee/employeeList.component.html',
-            styleUrls: ['app/employee/employeeList.component.css']
-        }),
-        __metadata("design:paramtypes", [])
-    ], EmployeeListComponent);
     return EmployeeListComponent;
 }());
+EmployeeListComponent = __decorate([
+    core_1.Component({
+        selector: 'list-employee',
+        templateUrl: 'app/employee/employeeList.component.html',
+        styleUrls: ['app/employee/employeeList.component.css']
+    }),
+    __metadata("design:paramtypes", [])
+], EmployeeListComponent);
 exports.EmployeeListComponent = EmployeeListComponent;
 //# sourceMappingURL=employeeList.component.js.map

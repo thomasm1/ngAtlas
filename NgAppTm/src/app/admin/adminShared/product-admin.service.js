@@ -5,10 +5,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var firebase = require("firebase");
-var ProductAdminService = /** @class */ (function () {
+var ProductAdminService = (function () {
     function ProductAdminService() {
     }
     ProductAdminService.prototype.createProduct = function (prod) {
@@ -51,10 +50,10 @@ var ProductAdminService = /** @class */ (function () {
             alert("Error - Unable to delete " + deleteProduct.imgTitle);
         });
     };
-    ProductAdminService = __decorate([
-        core_1.Injectable()
-    ], ProductAdminService);
     return ProductAdminService;
 }());
+ProductAdminService = __decorate([
+    core_1.Injectable()
+], ProductAdminService);
 exports.ProductAdminService = ProductAdminService;
 //# sourceMappingURL=product-admin.service.js.map

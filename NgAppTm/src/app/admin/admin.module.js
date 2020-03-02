@@ -5,7 +5,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
 var router_1 = require("@angular/router");
@@ -35,39 +34,39 @@ var AdminRoutes = [
         ]
     },
 ];
-var AdminModule = /** @class */ (function () {
+var AdminModule = (function () {
     function AdminModule() {
     }
-    AdminModule = __decorate([
-        core_1.NgModule({
-            imports: [
-                common_1.CommonModule,
-                forms_1.FormsModule,
-                router_1.RouterModule.forChild(AdminRoutes)
-            ],
-            exports: [
-                router_1.RouterModule,
-                trunc_pipe_1.TruncatePipe
-            ],
-            declarations: [
-                admin_component_1.AdminComponent,
-                admin_menu_component_1.AdminMenuComponent,
-                login_component_1.LoginComponent,
-                sign_up_component_1.SignUpComponent,
-                blog_admin_component_1.BlogAdminComponent,
-                blog_add_component_1.BlogAddComponent,
-                trunc_pipe_1.TruncatePipe,
-                product_admin_component_1.ProductAdminComponent,
-                product_add_component_1.ProductAddComponent
-            ],
-            providers: [
-                user_service_1.UserService,
-                blog_admin_service_1.BlogAdminService,
-                product_admin_service_1.ProductAdminService
-            ]
-        })
-    ], AdminModule);
     return AdminModule;
 }());
+AdminModule = __decorate([
+    core_1.NgModule({
+        imports: [
+            common_1.CommonModule,
+            forms_1.FormsModule,
+            router_1.RouterModule.forChild(AdminRoutes)
+        ],
+        exports: [
+            router_1.RouterModule,
+            trunc_pipe_1.TruncatePipe
+        ],
+        declarations: [
+            admin_component_1.AdminComponent,
+            admin_menu_component_1.AdminMenuComponent,
+            login_component_1.LoginComponent,
+            sign_up_component_1.SignUpComponent,
+            blog_admin_component_1.BlogAdminComponent,
+            blog_add_component_1.BlogAddComponent,
+            trunc_pipe_1.TruncatePipe,
+            product_admin_component_1.ProductAdminComponent,
+            product_add_component_1.ProductAddComponent
+        ],
+        providers: [
+            user_service_1.UserService,
+            blog_admin_service_1.BlogAdminService,
+            product_admin_service_1.ProductAdminService
+        ]
+    })
+], AdminModule);
 exports.AdminModule = AdminModule;
 //# sourceMappingURL=admin.module.js.map

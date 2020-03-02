@@ -8,13 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var router_1 = require("@angular/router");
 var core_1 = require("@angular/core");
 var firebase = require("firebase");
 var product_1 = require("../admin/adminShared/product");
 var shopping_cart_service_1 = require("../shared/shopping-cart.service");
-var ProductDetailComponent = /** @class */ (function () {
+var ProductDetailComponent = (function () {
     function ProductDetailComponent(route, router, cartSVC) {
         this.route = route;
         this.router = router;
@@ -46,16 +45,16 @@ var ProductDetailComponent = /** @class */ (function () {
     ProductDetailComponent.prototype.addProduct = function (id, name, price) {
         this.cartSVC.addProduct(id, name, price);
     };
-    ProductDetailComponent = __decorate([
-        core_1.Component({
-            templateUrl: './product-detail.component.html',
-            styleUrls: ['./product-detail.component.css']
-        }),
-        __metadata("design:paramtypes", [router_1.ActivatedRoute,
-            router_1.Router,
-            shopping_cart_service_1.ShoppingCartService])
-    ], ProductDetailComponent);
     return ProductDetailComponent;
 }());
+ProductDetailComponent = __decorate([
+    core_1.Component({
+        templateUrl: './product-detail.component.html',
+        styleUrls: ['./product-detail.component.css']
+    }),
+    __metadata("design:paramtypes", [router_1.ActivatedRoute,
+        router_1.Router,
+        shopping_cart_service_1.ShoppingCartService])
+], ProductDetailComponent);
 exports.ProductDetailComponent = ProductDetailComponent;
 //# sourceMappingURL=product-detail.component.js.map

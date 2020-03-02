@@ -8,11 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var user_service_1 = require("../adminShared/user.service");
 var router_1 = require("@angular/router");
-var AdminMenuComponent = /** @class */ (function () {
+var AdminMenuComponent = (function () {
     function AdminMenuComponent(userSVC, router) {
         this.userSVC = userSVC;
         this.router = router;
@@ -24,14 +23,14 @@ var AdminMenuComponent = /** @class */ (function () {
         this.userSVC.logout();
         this.router.navigate(['']);
     };
-    AdminMenuComponent = __decorate([
-        core_1.Component({
-            templateUrl: './admin-menu.component.html',
-            styleUrls: ['./admin-menu.component.css']
-        }),
-        __metadata("design:paramtypes", [user_service_1.UserService, router_1.Router])
-    ], AdminMenuComponent);
     return AdminMenuComponent;
 }());
+AdminMenuComponent = __decorate([
+    core_1.Component({
+        templateUrl: './admin-menu.component.html',
+        styleUrls: ['./admin-menu.component.css']
+    }),
+    __metadata("design:paramtypes", [user_service_1.UserService, router_1.Router])
+], AdminMenuComponent);
 exports.AdminMenuComponent = AdminMenuComponent;
 //# sourceMappingURL=admin-menu.component.js.map

@@ -8,11 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var firebase = require("firebase");
-var UserService = /** @class */ (function () {
+var UserService = (function () {
     function UserService(router) {
         this.router = router;
         this.userLoggedIn = false;
@@ -64,11 +63,11 @@ var UserService = /** @class */ (function () {
             alert(error.message + " Unable to logout. Try again!");
         });
     };
-    UserService = __decorate([
-        core_1.Injectable(),
-        __metadata("design:paramtypes", [router_1.Router])
-    ], UserService);
     return UserService;
 }());
+UserService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [router_1.Router])
+], UserService);
 exports.UserService = UserService;
 //# sourceMappingURL=user.service.js.map

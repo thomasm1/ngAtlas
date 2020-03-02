@@ -8,12 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var router_1 = require("@angular/router");
 var core_1 = require("@angular/core");
 var firebase = require("firebase");
 var blog_1 = require("../admin/adminShared/blog");
-var BlogDetailComponent = /** @class */ (function () {
+var BlogDetailComponent = (function () {
     function BlogDetailComponent(route, router) {
         this.route = route;
         this.router = router;
@@ -39,14 +38,14 @@ var BlogDetailComponent = /** @class */ (function () {
         });
     };
     ;
-    BlogDetailComponent = __decorate([
-        core_1.Component({
-            templateUrl: './blog-detail.component.html',
-            styleUrls: ['./blog-detail.component.css']
-        }),
-        __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router])
-    ], BlogDetailComponent);
     return BlogDetailComponent;
 }());
+BlogDetailComponent = __decorate([
+    core_1.Component({
+        templateUrl: './blog-detail.component.html',
+        styleUrls: ['./blog-detail.component.css']
+    }),
+    __metadata("design:paramtypes", [router_1.ActivatedRoute, router_1.Router])
+], BlogDetailComponent);
 exports.BlogDetailComponent = BlogDetailComponent;
 //# sourceMappingURL=blog-detail.component.js.map

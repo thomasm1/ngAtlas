@@ -8,12 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var product_admin_service_1 = require("../adminShared/product-admin.service");
 var product_1 = require("../adminShared/product");
-var ProductAddComponent = /** @class */ (function () {
+var ProductAddComponent = (function () {
     function ProductAddComponent(prodAdminSVC, router) {
         this.prodAdminSVC = prodAdminSVC;
         this.router = router;
@@ -37,14 +36,14 @@ var ProductAddComponent = /** @class */ (function () {
     ProductAddComponent.prototype.cancel = function () {
         this.router.navigate(['/admin']);
     };
-    ProductAddComponent = __decorate([
-        core_1.Component({
-            selector: 'product-menu',
-            templateUrl: './product-add.component.html',
-        }),
-        __metadata("design:paramtypes", [product_admin_service_1.ProductAdminService, router_1.Router])
-    ], ProductAddComponent);
     return ProductAddComponent;
 }());
+ProductAddComponent = __decorate([
+    core_1.Component({
+        selector: 'product-menu',
+        templateUrl: './product-add.component.html',
+    }),
+    __metadata("design:paramtypes", [product_admin_service_1.ProductAdminService, router_1.Router])
+], ProductAddComponent);
 exports.ProductAddComponent = ProductAddComponent;
 //# sourceMappingURL=product-add.component.js.map

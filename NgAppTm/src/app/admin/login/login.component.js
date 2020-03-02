@@ -8,11 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var user_service_1 = require("../adminShared/user.service");
 var router_1 = require("@angular/router");
-var LoginComponent = /** @class */ (function () {
+var LoginComponent = (function () {
     function LoginComponent(userSVC, router) {
         this.userSVC = userSVC;
         this.router = router;
@@ -27,14 +26,14 @@ var LoginComponent = /** @class */ (function () {
     LoginComponent.prototype.cancel = function () {
         this.router.navigate(['']);
     };
-    LoginComponent = __decorate([
-        core_1.Component({
-            templateUrl: './login.component.html',
-            styleUrls: ['./login.component.css']
-        }),
-        __metadata("design:paramtypes", [user_service_1.UserService, router_1.Router])
-    ], LoginComponent);
     return LoginComponent;
 }());
+LoginComponent = __decorate([
+    core_1.Component({
+        templateUrl: './login.component.html',
+        styleUrls: ['./login.component.css']
+    }),
+    __metadata("design:paramtypes", [user_service_1.UserService, router_1.Router])
+], LoginComponent);
 exports.LoginComponent = LoginComponent;
 //# sourceMappingURL=login.component.js.map

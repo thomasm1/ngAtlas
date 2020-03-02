@@ -8,11 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var user_service_1 = require("../adminShared/user.service");
 var router_1 = require("@angular/router");
-var SignUpComponent = /** @class */ (function () {
+var SignUpComponent = (function () {
     function SignUpComponent(userSVC, router) {
         this.userSVC = userSVC;
         this.router = router;
@@ -31,14 +30,14 @@ var SignUpComponent = /** @class */ (function () {
     SignUpComponent.prototype.cancel = function () {
         this.router.navigate(['/admin/login']);
     };
-    SignUpComponent = __decorate([
-        core_1.Component({
-            templateUrl: './sign-up.component.html',
-            styleUrls: ['./sign-up.component.css']
-        }),
-        __metadata("design:paramtypes", [user_service_1.UserService, router_1.Router])
-    ], SignUpComponent);
     return SignUpComponent;
 }());
+SignUpComponent = __decorate([
+    core_1.Component({
+        templateUrl: './sign-up.component.html',
+        styleUrls: ['./sign-up.component.css']
+    }),
+    __metadata("design:paramtypes", [user_service_1.UserService, router_1.Router])
+], SignUpComponent);
 exports.SignUpComponent = SignUpComponent;
 //# sourceMappingURL=sign-up.component.js.map

@@ -8,13 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var user_service_1 = require("../adminShared/user.service");
 var router_1 = require("@angular/router");
 var firebase = require("firebase");
 var product_admin_service_1 = require("../adminShared/product-admin.service");
-var ProductAdminComponent = /** @class */ (function () {
+var ProductAdminComponent = (function () {
     function ProductAdminComponent(userSVC, router, prodAdminSVC) {
         this.userSVC = userSVC;
         this.router = router;
@@ -62,16 +61,16 @@ var ProductAdminComponent = /** @class */ (function () {
             alert('Nothing deleted!');
         }
     };
-    ProductAdminComponent = __decorate([
-        core_1.Component({
-            templateUrl: './product-admin.component.html',
-            styleUrls: ['./product-admin.component.css']
-        }),
-        __metadata("design:paramtypes", [user_service_1.UserService,
-            router_1.Router,
-            product_admin_service_1.ProductAdminService])
-    ], ProductAdminComponent);
     return ProductAdminComponent;
 }());
+ProductAdminComponent = __decorate([
+    core_1.Component({
+        templateUrl: './product-admin.component.html',
+        styleUrls: ['./product-admin.component.css']
+    }),
+    __metadata("design:paramtypes", [user_service_1.UserService,
+        router_1.Router,
+        product_admin_service_1.ProductAdminService])
+], ProductAdminComponent);
 exports.ProductAdminComponent = ProductAdminComponent;
 //# sourceMappingURL=product-admin.component.js.map

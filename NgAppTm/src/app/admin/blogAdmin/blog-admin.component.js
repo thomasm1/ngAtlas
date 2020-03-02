@@ -8,13 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var user_service_1 = require("../adminShared/user.service");
 var router_1 = require("@angular/router");
 var firebase = require("firebase");
 var blog_admin_service_1 = require("../adminShared/blog-admin.service");
-var BlogAdminComponent = /** @class */ (function () {
+var BlogAdminComponent = (function () {
     function BlogAdminComponent(userSVC, router, blogAdminSVC) {
         this.userSVC = userSVC;
         this.router = router;
@@ -62,16 +61,16 @@ var BlogAdminComponent = /** @class */ (function () {
             alert('Nothing deleted!');
         }
     };
-    BlogAdminComponent = __decorate([
-        core_1.Component({
-            templateUrl: './blog-admin.component.html',
-            styleUrls: ['./blog-admin.component.css']
-        }),
-        __metadata("design:paramtypes", [user_service_1.UserService,
-            router_1.Router,
-            blog_admin_service_1.BlogAdminService])
-    ], BlogAdminComponent);
     return BlogAdminComponent;
 }());
+BlogAdminComponent = __decorate([
+    core_1.Component({
+        templateUrl: './blog-admin.component.html',
+        styleUrls: ['./blog-admin.component.css']
+    }),
+    __metadata("design:paramtypes", [user_service_1.UserService,
+        router_1.Router,
+        blog_admin_service_1.BlogAdminService])
+], BlogAdminComponent);
 exports.BlogAdminComponent = BlogAdminComponent;
 //# sourceMappingURL=blog-admin.component.js.map

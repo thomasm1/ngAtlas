@@ -1,6 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var Blog = /** @class */ (function () {
+var Blog = (function () {
     function Blog(title, content, imgTitle, img, id) {
         this.title = title;
         this.content = content;

@@ -8,10 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var publication_service_1 = require("./publication.service");
-var PublicationListComponent = /** @class */ (function () {
+var PublicationListComponent = (function () {
     function PublicationListComponent(_publicationService) {
         this._publicationService = _publicationService;
         this.selectedPublicationCountRadioButton = 'All';
@@ -59,16 +58,16 @@ var PublicationListComponent = /** @class */ (function () {
     PublicationListComponent.prototype.trackByEmpCode = function (index, publication) {
         return publication.code;
     };
-    PublicationListComponent = __decorate([
-        core_1.Component({
-            selector: 'list-publication',
-            templateUrl: 'app/publication/publicationList.component.html',
-            styleUrls: ['app/publication/publicationList.component.css'],
-            providers: [publication_service_1.PublicationService]
-        }),
-        __metadata("design:paramtypes", [publication_service_1.PublicationService])
-    ], PublicationListComponent);
     return PublicationListComponent;
 }());
+PublicationListComponent = __decorate([
+    core_1.Component({
+        selector: 'list-publication',
+        templateUrl: 'app/publication/publicationList.component.html',
+        styleUrls: ['app/publication/publicationList.component.css'],
+        providers: [publication_service_1.PublicationService]
+    }),
+    __metadata("design:paramtypes", [publication_service_1.PublicationService])
+], PublicationListComponent);
 exports.PublicationListComponent = PublicationListComponent;
 //# sourceMappingURL=publicationList.component.js.map

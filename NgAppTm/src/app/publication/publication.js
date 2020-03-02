@@ -1,6 +1,5 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var Publication = /** @class */ (function () {
+var Publication = (function () {
     /*  public code: string;
       public name: string;
       public gender: string;

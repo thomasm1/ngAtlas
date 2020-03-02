@@ -8,12 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 //import * as firebase from 'firebase';
 var user_service_1 = require("../admin/adminShared/user.service");
-var HomeComponent = /** @class */ (function () {
+var HomeComponent = (function () {
     function HomeComponent(userSVC, router) {
         this.userSVC = userSVC;
         this.router = router;
@@ -33,14 +32,14 @@ var HomeComponent = /** @class */ (function () {
     HomeComponent.prototype.choosePost = function (post) {
         this.router.navigate(['/post', post.id]);
     };
-    HomeComponent = __decorate([
-        core_1.Component({
-            templateUrl: './home.component.html',
-            styleUrls: ['./home.component.css']
-        }),
-        __metadata("design:paramtypes", [user_service_1.UserService, router_1.Router])
-    ], HomeComponent);
     return HomeComponent;
 }());
+HomeComponent = __decorate([
+    core_1.Component({
+        templateUrl: './home.component.html',
+        styleUrls: ['./home.component.css']
+    }),
+    __metadata("design:paramtypes", [user_service_1.UserService, router_1.Router])
+], HomeComponent);
 exports.HomeComponent = HomeComponent;
 //# sourceMappingURL=home1.component.js.map

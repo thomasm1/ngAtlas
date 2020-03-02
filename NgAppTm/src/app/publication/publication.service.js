@@ -5,9 +5,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var PublicationService = /** @class */ (function () {
+var PublicationService = (function () {
     function PublicationService() {
     }
     PublicationService.prototype.getPublications = function () {
@@ -25,10 +24,10 @@ var PublicationService = /** @class */ (function () {
             { code: 'emp105', name: 'Ee', gender: 'Female', annualSalary: 65000.88, dateOfBirth: '3/04/1977' }
         ];
     };
-    PublicationService = __decorate([
-        core_1.Injectable()
-    ], PublicationService);
     return PublicationService;
 }());
+PublicationService = __decorate([
+    core_1.Injectable()
+], PublicationService);
 exports.PublicationService = PublicationService;
 //# sourceMappingURL=publication.service.js.map
